@@ -35,18 +35,19 @@ public class Persona implements Información{
 		Pattern patron = Pattern.compile("[0-9]+");
 		int númeroIngresado=0;
 		String valor;
+		String textoLimpio;
 		
 		System.out.println("Ingrese nombre.");
 		if(ingresoDatos.nextLine()!=null) {
 			valor = ingresoDatos.nextLine();
-			String textoLimpio = Normalizer.normalize(valor, Normalizer.Form.NFD);
+			textoLimpio = Normalizer.normalize(valor, Normalizer.Form.NFD);
 			textoLimpio = Normalizer.normalize(valor, Normalizer.Form.NFC);
 			nombre=textoLimpio;
 		}
 		System.out.println("Ingrese apellido.");
 		if(ingresoDatos.nextLine()!=null) {
 			valor = ingresoDatos.nextLine();
-			String textoLimpio = Normalizer.normalize(valor, Normalizer.Form.NFD);
+			textoLimpio = Normalizer.normalize(valor, Normalizer.Form.NFD);
 			textoLimpio = Normalizer.normalize(valor, Normalizer.Form.NFC);
 			apellido=textoLimpio;
 		}
@@ -66,7 +67,7 @@ public class Persona implements Información{
 		System.out.println("Ingrese estado civil. Opciones: Soltero, Casado, Divorciado, Viudo.");
 			valor = ingresoDatos.nextLine();
 		if(valor!=null) {
-			String textoLimpio = Normalizer.normalize(valor, Normalizer.Form.NFD);
+			textoLimpio = Normalizer.normalize(valor, Normalizer.Form.NFD);
 			textoLimpio = Normalizer.normalize(valor, Normalizer.Form.NFC);
 		
 		switch (textoLimpio) {

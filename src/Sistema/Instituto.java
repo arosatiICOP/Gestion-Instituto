@@ -10,14 +10,12 @@ public class Instituto {
 	private int altura;
 	private String dirección;
 	private HashMap<Integer, String> cursos;
+	private ArrayList<Profesor> profesores;
 	private ArrayList<Estudiante> estudiantes;
-	
+	private ArrayList<PersonalServicio> personalS;
 	
 	public Instituto() {
-		
 		crearInstituto();
-		cursos = new HashMap<Integer, String>();
-		estudiantes = new ArrayList<Estudiante>();	
 	}
 	
 	public Instituto(String nombre, int altura, String dirección) {
@@ -27,13 +25,17 @@ public class Instituto {
 		this.dirección=dirección;
 		cursos = new HashMap<Integer, String>();
 		estudiantes = new ArrayList<Estudiante>();
+		setProfesores(new ArrayList<Profesor>());
+		setPersonalS(new ArrayList<PersonalServicio>());
 	}
 
 	public void crearInstituto() {
 		
 		Scanner ingresoDatos = new Scanner(System.in);
 		cursos = new HashMap<Integer, String>();
-		estudiantes = new ArrayList<Estudiante>();	
+		estudiantes = new ArrayList<Estudiante>();
+		setProfesores(new ArrayList<Profesor>());
+		setPersonalS(new ArrayList<PersonalServicio>());
 		
 		System.out.println("Ingrese nombre del Instituto: ");
 		nombre = ingresoDatos.nextLine();
@@ -53,12 +55,22 @@ public class Instituto {
 		System.out.print("Dirección: "+dirección);
 		System.out.println("Altura: "+ altura);
 	}
-
-	/*public void crearCurso() {
-	this.cursos.put(1, "Matematica");
-	this.cursos.put(2, "Contabilidad");
-	this.cursos.keySet().forEach(key -> {System.out.println(key+" "+this.cursos.get(1));});
-	}*/
+	
+	public void añadirCurso() {
+		
+	}
+		
+	public void añadirEstudiante() {
+			
+	}
+		
+	public void añadirProfesor() {
+		
+	}
+	
+	public void añadirPersonalS() {
+		
+	}
 	
 	public String getNombre() {
 		return nombre;
@@ -98,5 +110,21 @@ public class Instituto {
 
 	public void setEstudiantes(ArrayList<Estudiante> estudiantes) {
 		this.estudiantes = estudiantes;
+	}
+
+	public ArrayList<Profesor> getProfesores() {
+		return profesores;
+	}
+
+	public void setProfesores(ArrayList<Profesor> profesores) {
+		this.profesores = profesores;
+	}
+
+	public ArrayList<PersonalServicio> getPersonalS() {
+		return personalS;
+	}
+
+	public void setPersonalS(ArrayList<PersonalServicio> personalS) {
+		this.personalS = personalS;
 	}
 }

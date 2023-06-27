@@ -9,13 +9,11 @@ public class Estudiante extends Persona implements Información{
 	
 	public Estudiante() {
 		super();
-		//super.mostrar();
 		cursosMatriculado = new ArrayList<String>();
 	}
 	
 	public Estudiante(String nombre, String apellido, int numeroIdentificación, EstadoCivil estadoCivil) {
 		super();
-		//super.mostrar();
 		//super(nombre, apellido, numeroIdentificación, estadoCivil);
 		cursosMatriculado = new ArrayList<String>();
 	}
@@ -30,6 +28,10 @@ public class Estudiante extends Persona implements Información{
 		cursosMatriculado.add(textoIngresado);
 		
 		ingresoDatos.close();
+	}
+	
+	public void eliminarCurso() {
+		
 	}
 	
 	public String mostrar() {

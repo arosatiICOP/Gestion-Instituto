@@ -10,13 +10,11 @@ public class PersonalServicio extends Empleado implements Información{
 	
 	public PersonalServicio() {
 		super();
-		//super.mostrar();
-		//crearPersonal();
+		crearPersonal();
 	}
 	
 	public PersonalServicio(Sección secciónPers) {
 		super();
-		//super.mostrar();
 		this.secciónPers=secciónPers;
 	}
 	
@@ -37,6 +35,7 @@ public class PersonalServicio extends Empleado implements Información{
 		
 		}catch(Exception e){
 			System.out.println("Ingrese una sección correcta.");
+			System.exit(0);
 		}
 		ingresoDatos.close();
 	}
@@ -62,10 +61,12 @@ public class PersonalServicio extends Empleado implements Información{
 			
 			}else if (ingresoDatos.nextLine().toLowerCase()=="no") {
 				System.out.println("¡Hasta luego!");
+				System.exit(0);
 			}
 			
 		}catch(Exception e) {
 			System.out.println("Error, ingrese si o no.");
+			System.exit(0);
 		}
 		// Completar, revisar que el texto ingresado no sea el departamento al cual ya pertenece
 		ingresoDatos.close();

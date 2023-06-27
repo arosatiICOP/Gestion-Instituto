@@ -13,13 +13,11 @@ public class Empleado extends Persona implements Información{
 		super();
 		añoIncorp=0;
 		numLegajo=0;
-		//super.mostrar();
 		crearEmpleado();
 	}
 	
 	public Empleado(int añoIncorp, int numLegajo) {
 		super();
-		//super.mostrar();
 		this.añoIncorp=añoIncorp;
 		this.numLegajo=numLegajo;
 	}
@@ -41,6 +39,7 @@ public class Empleado extends Persona implements Información{
 			}
 		}catch(Exception e){
 			System.out.println("Error, ingrese un número.");
+			System.exit(0);
 		}
 		
 		System.out.println("Ingrese número de legajo.");
@@ -54,6 +53,7 @@ public class Empleado extends Persona implements Información{
 			}
 		}catch(Exception e){
 			System.out.println("Error, ingrese un número.");
+			System.exit(0);
 		}
 		
 		ingresoDatos.close();
@@ -87,14 +87,17 @@ public class Empleado extends Persona implements Información{
 					}
 				}catch(Exception e){
 					System.out.println("Error, ingrese un número.");
+					System.exit(0);
 				}
 				
 			}else if(ingresoDatos.nextLine().toLowerCase()=="no"){
 				System.out.println("¡Hasta luego!");
+				System.exit(0);
 			}
 			
 				}catch(Exception e) {
 				System.out.println("Error, ingrese si o no.");
+				System.exit(0);
 			}
 		
 		ingresoDatos.close();
